@@ -1,0 +1,166 @@
+<none>                                    <none>                                                                        4b7ce07002c6   4 months ago     12.8MB
+docker/desktop-kubernetes                 kubernetes-v1.34.1-cni-v1.7.1-critools-v1.33.0-cri-dockerd-v0.3.20-1-debian   12d6673564e0   5 months ago     591MB
+registry.k8s.io/kube-controller-manager   v1.34.1                                                                       2bf47c1b01f5   5 months ago     101MB
+registry.k8s.io/kube-apiserver            v1.34.1                                                                       b9d7c117f8ac   5 months ago     118MB
+registry.k8s.io/kube-scheduler            v1.34.1                                                                       6e9fbc4e25a5   5 months ago     73.5MB
+registry.k8s.io/kube-proxy                v1.34.1                                                                       913cc83ca0b5   5 months ago     102MB
+registry.k8s.io/etcd                      3.6.4-0                                                                       e36c08168342   6 months ago     273MB
+registry.k8s.io/pause     3.10.1                                                                        278fb9dbcca9   8 months ago     1.06MB
+registry.k8s.io/coredns/coredns           v1.12.1                                                                       e8c262566636   10 months ago    101MB
+registry.k8s.io/pause                     3.10                                                                          ee6521f290b2   21 months ago    1.06MB
+PS C:\Users\charl\charleen-demo> docker login ghcr.io
+Username: CharleeAnotida
+Password:
+Login Succeeded
+PS C:\Users\charl\charleen-demo> docker push => => exporting config sha256:1fb0f9eb1209ae348727a3b0113c3ee4324061b5f5df3765d7b2f9baae55d7c7                                            0.0s 
+docker: 'docker push' requires 1 argument
+
+Usage:  docker push [OPTIONS] NAME[:TAG]
+
+Run 'docker push --help' for more information
+PS C:\Users\charl\charleen-demo> => => exporting attestation manifest sha256:0ad37f1b7128b38e5912265ab4736477f79473576cb910317bb91b8af851cb65                              0.1s
+=> : The term '=>' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or 
+if a path was included, verify that the path is correct and try again.
+At line:1 char:2
++  => => exporting attestation manifest sha256:0ad37f1b7128b38e5912265a ...
++  ~~
+    + CategoryInfo          : ObjectNotFound: (=>:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> => => exporting manifest list sha256:b82707ef651c8868ead7c873bbce6765a03c32d98cf67fa3f335e281878cbbce         
+                            0.0s
+=> : The term '=>' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or 
+if a path was included, verify that the path is correct and try again.
+At line:1 char:2
++  => => exporting manifest list sha256:b82707ef651c8868ead7c873bbce676 ...
++  ~~
+    + CategoryInfo          : ObjectNotFound: (=>:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo>  => => naming to ghcr.io/charleeanotida/charleen-demo:latest                                                   
+                            0.0s
+=> : The term '=>' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or 
+if a path was included, verify that the path is correct and try again.
+At line:1 char:2
++  => => naming to ghcr.io/charleeanotida/charleen-demo:latest          ...
++  ~~
+    + CategoryInfo          : ObjectNotFound: (=>:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> => => unpacking to ghcr.io/charleeanotida/charleen-demo:latest                                                
+                            0.1s
+=> : The term '=>' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or 
+if a path was included, verify that the path is correct and try again.
+At line:1 char:2
++  => => unpacking to ghcr.io/charleeanotida/charleen-demo:latest       ...
++  ~~
+    + CategoryInfo          : ObjectNotFound: (=>:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> PS C:\Users\charl\charleen-demo> docker images
+Get-Process : A positional parameter cannot be found that accepts argument 'docker'.
+At line:1 char:1
++ PS C:\Users\charl\charleen-demo> docker images
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Process], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.GetProcessCommand
+
+PS C:\Users\charl\charleen-demo>REPOSITORY                                TAG                                                                  
+         IMAGE ID       CREATED          SIZE
+REPOSITORY : The term 'REPOSITORY' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling 
+of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ REPOSITORY                                TAG                         ...
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (REPOSITORY:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo>ghcr.io/charleeanotida/charleen-demo      latest                                                               
+         b82707ef651c   30 seconds ago   79.8MB
+ghcr.io/charleeanotida/charleen-demo : The term 'ghcr.io/charleeanotida/charleen-demo' is not recognized as the name of a cmdlet, function, 
+script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.     
+At line:1 char:1
++ ghcr.io/charleeanotida/charleen-demo      latest                      ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ghcr.io/charleeanotida/charleen-demo:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo>apps                                      latest                                                               
+         24d3458f93cc   24 hours ago     200MB
+apps : The term 'apps' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, 
+or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ apps                                      latest                      ...
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (apps:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> mongo                                     latest                                                               
+         6f55a078e025   3 weeks ago      1.27GB
+mongo : The term 'mongo' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the 
+name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ mongo                                     latest                      ...
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (mongo:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> charlenn/ap1                              v1.1                                                                 
+         25109184c71b   3 weeks ago      13MB
+charlenn/ap1 : The term 'charlenn/ap1' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ charlenn/ap1                              v1.1                        ...
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (charlenn/ap1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> charlenn/apl                              v1.1                                                                 
+         25109184c71b   3 weeks ago      13MB
+charlenn/apl : The term 'charlenn/apl' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ charlenn/apl                              v1.1                        ...
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (charlenn/apl:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> alpine                                    latest                                                               
+         25109184c71b   3 weeks ago      13MB
+alpine : The term 'alpine' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the 
+name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ alpine                                    latest                      ...
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (alpine:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\charleen-demo> dir                      ---XX 
+                                  
+
+    Directory: C:\Users\charl\charleen-demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         2/19/2026  12:35 PM             67 dockerfile
+-a----         2/19/2026  12:36 PM              0 index.html
+
+
+PS C:\Users\charl\charleen-demo> docker push ghcr.io/CharleeAnotida/charleen-demo
+invalid reference format: repository name (CharleeAnotida/charleen-demo) must be lowercase
+PS C:\Users\charl\charleen-demo> docker push ghcr.io/charleeanotida/charleen-demo
+Using default tag: latest
+The push refers to repository [ghcr.io/charleeanotida/charleen-demo]
+a4f4b8258935: Pushed
+c147abd57811: Pushed
+194fa24e147d: Pushed
+2d35ebdb57d9: Pushed
+bdabb0d44271: Pushed
+ff8a36d5502a: Pushed
+d9a55dab5954: Pushed
+3eaba6cd10a3: Pushed
+df413d6ebdc8: Pushed
+8f6a6833e95d: Pushed
+latest: digest: sha256:b82707ef651c8868ead7c873bbce6765a03c32d98cf67fa3f335e281878cbbce size: 856
+PS C:\Users\charl\charleen-demo>
