@@ -1,0 +1,155 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows 
+
+PS C:\Users\charl>mkdir mysql-docker
+
+
+    Directory: C:\Users\charl
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         2/20/2026  12:24 PM                mysql-docker
+
+
+PS C:\Users\charl> cd mysql-docker
+PS C:\Users\charl\mysql-docker> notepad init.sql
+PS C:\Users\charl\mysql-docker> notepad dockerfile
+PS C:\Users\charl\mysql-docker> dir
+
+
+    Directory: C:\Users\charl\mysql-docker
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         2/20/2026  12:29 PM            222 dockerfile.txt
+-a----         2/20/2026  12:28 PM            317 init.sql
+
+
+PS C:\Users\charl\mysql-docker> ren dockerfile.txt Dockerfile
+PS C:\Users\charl\mysql-docker> docker build -t college-mysql .
+[+] Building 1.8s (7/7) FINISHED                                     docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                 0.1s
+ => => transferring dockerfile: 261B                                                 0.0s 
+ => [internal] load metadata for docker.io/library/mysql:8.0                         0.1s 
+ => [internal] load .dockerignore                                                    0.0s
+ => => transferring context: 2B                                                      0.0s 
+ => [internal] load build context                                                    0.1s 
+ => => transferring context: 354B                                                    0.0s 
+ => [1/2] FROM docker.io/library/mysql:8.0@sha256:0275a35e79c60caae68fac520602d9f68  0.5s 
+ => => resolve docker.io/library/mysql:8.0@sha256:0275a35e79c60caae68fac520602d9f68  0.1s 
+ => [2/2] COPY init.sql /docker-entrypoint-initdb.d/                                 0.1s
+ => exporting to image                                                               0.5s 
+ => => exporting layers                                                              0.2s 
+ => => exporting manifest sha256:f9dc3d3a29bdd72ddbee1ac66884b49764eb9a7798af1c12ee  0.0s 
+ => => exporting config sha256:4bfb6be39e707708cf864e1af396fc45c7b6778c652bd45df3a2  0.0s 
+ => => exporting attestation manifest sha256:e52f274222274a34dd8ad526b50edc8ff15dac  0.0s 
+ => => exporting manifest list sha256:d7960d1e69a9b873f1642caac33c6eb4862cea7ee525c  0.0s 
+ => => naming to docker.io/library/college-mysql:latest                              0.0s 
+ => => unpacking to docker.io/library/college-mysql:latest                           0.1s 
+
+ 1 warning found (use docker --debug to expand):
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "MYSQL_ROOT_PASSWORD") (line 5)
+PS C:\Users\charl\mysql-docker> ^C
+PS C:\Users\charl\mysql-docker> docker images
+REPOSITORY                                TAG                                             
+                              IMAGE ID       CREATED         SIZE
+college-mysql                             latest                                          
+                              d7960d1e69a9   2 minutes ago   1.06GB
+ghcr.io/charleeanotida/charleen-demo      latest                                          
+                              b82707ef651c   24 hours ago    79.8MB
+apps                                      latest                                          
+                              24d3458f93cc   2 days ago      200MB
+mongo                                     latest                                          
+                              6f55a078e025   3 weeks ago     1.27GB
+charlenn/ap1                              v1.1                                            
+                              25109184c71b   3 weeks ago     13MB
+charlenn/apl                              v1.1                                            
+                              25109184c71b   3 weeks ago     13MB
+alpine                                    latest                                          
+                              25109184c71b   3 weeks ago     13MB
+mysql                                     latest                                          
+                              6b18d01fb632   4 weeks ago     1.25GB
+redis                             latest                                          
+                              73dad4271642   5 weeks ago     202MB
+httpd                                     latest                                          
+                              dd178595edd6   5 weeks ago     175MB
+smart-log-analyzer-log-analyzer           latest                                          
+                              f3b0c27a5469   2 months ago    671MB
+devops_project_extended-app               latest                                          
+                              d6c03eec565b   2 months ago    1.3GB
+mysql                                     8.0                                             
+                              0275a35e79c6   2 months ago    1.06GB
+redis                                     7                                               
+                              483eaf69e400   3 months ago    173MB
+nginx                                     alpine                                          
+                              b3c656d55d7a   3 months ago    79.8MB
+<none>                                    <none>                                          
+                              569c4128dfa6   4 months ago    1.27GB
+ubuntu                                    latest                                          
+                              c35e29c94501   4 months ago    117MB
+python                            alpine                                          
+                              8373231e1e90   4 months ago    71.9MB
+<none>                                    <none>                                          
+                              4b7ce07002c6   4 months ago    12.8MB
+docker/desktop-kubernetes                 kubernetes-v1.34.1-cni-v1.7.1-critools-v1.33.0-cri-dockerd-v0.3.20-1-debian   12d6673564e0   5 months ago    591MB
+registry.k8s.io/kube-scheduler            v1.34.1                                         
+                              6e9fbc4e25a5   5 months ago    73.5MB
+registry.k8s.io/kube-apiserver            v1.34.1                                         
+                              b9d7c117f8ac   5 months ago    118MB
+registry.k8s.io/kube-controller-manager   v1.34.1                                         
+                              2bf47c1b01f5   5 months ago    101MB
+registry.k8s.io/kube-proxy                v1.34.1                                                                       913cc83ca0b5   5 months ago    102MB
+registry.k8s.io/etcd                      3.6.4-0                                                                       e36c08168342   6 months ago    273MB
+registry.k8s.io/pause                     3.10.1                                                                        278fb9dbcca9   8 months ago    1.06MB
+registry.k8s.io/coredns/coredns           v1.12.1                                                                       e8c262566636   10 months ago   101MB
+registry.k8s.io/pause                     3.10                                                                          ee6521f290b2   21 months ago   1.06MB
+PS C:\Users\charl\mysql-docker>ghcr.io/USERNAME/IMAGE_NAME:TAG
+ghcr.io/USERNAME/IMAGE_NAME:TAG : The term 'ghcr.io/USERNAME/IMAGE_NAME:TAG' is not 
+recognized as the name of a cmdlet, function, script file, or operable program. Check     
+the spelling of the name, or if a path was included, verify that the path is correct and  
+try again.
+At line:1 char:1
++ ghcr.io/USERNAME/IMAGE_NAME:TAG
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ghcr.io/USERNAME/IMAGE_NAME:TAG:String) [  
+   ], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\mysql-docker> ghcr.io/charleenanotida/mysql-docker
+ghcr.io/charleenanotida/mysql-docker : The term 'ghcr.io/charleenanotida/mysql-docker' 
+is not recognized as the name of a cmdlet, function, script file, or operable program.    
+Check the spelling of the name, or if a path was included, verify that the path is        
+correct and try again.
+At line:1 char:1
++ ghcr.io/charleenanotida/mysql-docker
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ghcr.io/charleenanotida/mysql-docker:Stri 
+   ng) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\mysql-docker>docker tag college-mysql ghcr.io/charleeanotida/college-mysql:v1
+PS C:\Users\charl\mysql-docker> docker login ghcr.io -u CharleeAnotida
+Password: 
+2026/02/20 12:42:21 notifying Desktop of credentials store update: Post "http://ipc/registry/credstore-updated": context deadline exceeded
+Login Succeeded
+PS C:\Users\charl\mysql-docker> docker push ghcr.io/charleeanotida/college-mysql:v1
+The push refers to repository [ghcr.io/charleeanotida/college-mysql]
+5f838d3bc363: Waiting                                                                     
+f0767811388f: Waiting                                                                     
+96682d77f5a0: Waiting                                                                     
+96682d77f5a0: Pushed
+7a5e1e917526: Pushed
+3a7bd505eaa0: Pushed
+0ddab5f772d8: Pushed
+a3c731ffd1a3: Pushed
+98c09a342d40: Pushed
+829e428547c3: Pushed
+4f1ef7d4d76b: Pushed
+8c3cd0b3401c: Pushed
+6b8812fa3131: Pushed
+v1: digest: sha256:d7960d1e69a9b873f1642caac33c6eb4862cea7ee525c753c582bdc81941dcf0 size: 856
+PS C:\Users\charl\mysql-docker>
