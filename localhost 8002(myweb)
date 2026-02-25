@@ -1,0 +1,65 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\charl>mkdir myweb
+
+
+    Directory: C:\Users\charl
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         2/25/2026  12:40 PM                myweb
+
+
+PS C:\Users\charl> cd myweb
+PS C:\Users\charl\myweb> notepad index.html
+PS C:\Users\charl\myweb> docker run -d -p 8002:80 --name myhttpd \
+docker: invalid reference format
+
+Run 'docker run --help' for more information
+PS C:\Users\charl\myweb> -v %cd%:/usr/local/apache2/htdocs/ \
+-v : The term '-v' is not recognized as the name of a cmdlet, function, script file, 
+or operable program. Check the spelling of the name, or if a path was included,        
+verify that the path is correct and try again.
+At line:1 char:1
++ -v %cd%:/usr/local/apache2/htdocs/ \
++ ~~
+    + CategoryInfo          : ObjectNotFound: (-v:String) [], CommandNotFoundExceptio 
+   n
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\charl\myweb> dir  
+
+
+    Directory: C:\Users\charl\myweb
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         2/25/2026  12:42 PM             60 index.html
+
+
+PS C:\Users\charl\myweb> docker run -d -p 8002:80 --charlenn myhttpd \
+unknown flag: --charlenn
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run 'docker run --help' for more information
+PS C:\Users\charl\myweb>docker run -d -p 8002:80 --python myhttpd \  
+unknown flag: --python
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run 'docker run --help' for more information
+PS C:\Users\charl\myweb> docker run -d --name c1 -v                            
+flag needs an argument: 'v' in -v
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run 'docker run --help' for more information
+PS C:\Users\charl\myweb> docker run -d -p 8002:80 --name myhttpd -v ${PWD}:/usr/local/apache2/htdocs/ httpd
+48a9a64b651307bad8086b2808a0d14e31cdd9c005531b55b3d2cb8ccffa99ae
+PS C:\Users\charl\myweb>                                                                                                                                                               
